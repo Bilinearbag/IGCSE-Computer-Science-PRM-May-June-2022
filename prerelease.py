@@ -50,7 +50,7 @@ while True:
               person = senior+adult+child
               if (adult+senior)*2<child:
                      print("\n There are not enough Adults or seniors to accompny the children; Please Start another booking")
-                     continue;
+                     break;
 
               print("\nAdults left without a ticket:", adult)
               print("Child left without a ticket:", child)
