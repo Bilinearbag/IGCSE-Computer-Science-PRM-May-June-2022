@@ -247,7 +247,7 @@ while True:
 
               #Alt.3 Group Ticket:
               
-              elif adult+senior>=6 and (child<3 or child%3!=0):
+              elif adult+senior+child>=6 and (child<3 or child%3!=0):
                      offer = input("\nThe best tickt you can book is the Group ticket as it is Cheaper Would you like to take this offer (Y/N)\n Enter:")
                      if offer=="Y":
                             if day_input == 1:
@@ -607,5 +607,5 @@ while True:
        if repeat1=="Y":
               continue;
        else:
-              print("\nYour transaction has been completed, Thank You. Have a Wonderful Vist!.")
+              print("\nYour transaction has been completed, Thank You. Have a Wonderful Visit!.")
               break;
