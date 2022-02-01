@@ -1,6 +1,9 @@
 from tabulate import tabulate
 import math
 
+
+i
+
 i=0
 bookingnumber = 1111
 #following are tickets for one day:
@@ -22,15 +25,39 @@ evebbq = 5.00
 
 while True:
        #table for ticket type:
-       table1 = [['Option','Ticket Type', 'Cost for one day', 'Cost for two days'], ['1','One Adult', '$20.00', '$30.00'], ['2','One Child (An Adult may bring up to two children', '$12.00', '$18.00'], ['3','One Senior', '$16.00', '$24.00'], ['4','Family Ticket ( Upto two adults or seniors and three children)', '$60.00','$90.00'], ['5', 'Groups of six people or more, price per person', '$15.00', '$22.50']]
-       print(tabulate(table1, headers ='firstrow', tablefmt='fancy_grid'))
+       tickettype=["1. one adult", "2. one child(an adult may bring up to two children)", "3. one senior", "4. family ticket (up to two adults or seniors, and three children)", "5. groups of six people or more, price per person"]
+       cost1day=[20.00, 12.00, 16.00, 60.00, 15.00]
+       cost2days=[30.00, 18.00, 24.00, 90.00, 22.50]
 
-       #table for extra attractions:
-       table2 = [['Option', 'Extra attraction', 'Cost per person'], ['1', 'Lion feeding', '$2.50'], ['2','Penguin Feeding', '$2.00'], ['3', 'Evening barbecue (two-day tickets only)', '$5.00']]
-       print(tabulate(table2, headers ='firstrow', tablefmt='fancy_grid'))
+       attractions=["1. lion feeding", "2. penguin feeding", "3. evening barbecue (two-day tickets only)"]
+       costattractions=[2.50, 2.00, 5.00]
+
+       days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 
 
 
+       # Task 1
+       # Displaying the ticket options and the extra attractions available
+
+
+       print("\n============ Ticket types ============")
+
+       print ("\n - - - - Cost for one day - - - - ")
+       for x in range(0,5): 
+         print(tickettype[x],": $", cost1day[x])
+
+       print ("\n - - - - Cost for two days - - - - ")
+       for x in range(0,5): 
+         print(tickettype[x],": $", cost2days[x])
+
+       print (" \n - - - - Extra Attractions - - - - ")
+
+       for x in range(0,3):
+         print(attractions[x],":$ ", costattractions[x])
+
+       
+       for x in range(7):
+              print(days)
 
        #code for processing a booking
        basket = [['Ticket Type', 'Duration', 'Price']]
@@ -247,7 +274,7 @@ while True:
 
               #Alt.3 Group Ticket:
               
-              elif adult+senior+child>=6 and (child<3 or child%3!=0):
+              elif adult+senior>=6 and (child<3 or child%3!=0):
                      offer = input("\nThe best tickt you can book is the Group ticket as it is Cheaper Would you like to take this offer (Y/N)\n Enter:")
                      if offer=="Y":
                             if day_input == 1:
@@ -607,5 +634,5 @@ while True:
        if repeat1=="Y":
               continue;
        else:
-              print("\nYour transaction has been completed, Thank You. Have a Wonderful Visit!.")
+              print("\nYour transaction has been completed, Thank You. Have a Wonderful Vist!.")
               break;
